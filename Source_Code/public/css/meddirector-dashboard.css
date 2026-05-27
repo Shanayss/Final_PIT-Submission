@@ -1,0 +1,103 @@
+/* MedDirector specific styles */
+
+.form-control{
+  width:100%;
+  padding:10px 10px;
+  border-radius:10px;
+  border:1px solid rgba(0,0,0,0.12);
+  outline:none;
+}
+
+.form-control:focus{
+  border-color: rgba(16,185,129,0.6);
+  box-shadow: 0 0 0 4px rgba(16,185,129,0.15);
+}
+
+.meddirector-grid {
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+}
+
+.meddirector-card {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.meddirector-card h3 {
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 12px;
+}
+
+.meddirector-number {
+  font-size: 28px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.meddirector-subtext {
+  margin-top: 6px;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.meddirector-span-3 { grid-column: span 3 / span 3; }
+.meddirector-span-4 { grid-column: span 4 / span 4; }
+.meddirector-span-6 { grid-column: span 6 / span 6; }
+.meddirector-span-8 { grid-column: span 8 / span 8; }
+.meddirector-span-12 { grid-column: span 12 / span 12; }
+
+.meddirector-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.meddirector-table th,
+.meddirector-table td {
+  padding: 10px 8px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  text-align: left;
+  font-size: 14px;
+}
+
+.meddirector-table th {
+  color: #374151;
+  font-weight: 700;
+}
+
+.meddirector-pill {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+.meddirector-pill--ok { background: #ecfdf5; color: #065f46; border-color: #a7f3d0; }
+.meddirector-pill--warn { background: #fffbeb; color: #92400e; border-color: #fde68a; }
+.meddirector-pill--bad { background: #fef2f2; color: #991b1b; border-color: #fecaca; }
+
+@media (max-width: 1100px) {
+  .meddirector-span-3 { grid-column: span 6 / span 6; }
+  .meddirector-span-4 { grid-column: span 6 / span 6; }
+  .meddirector-span-8 { grid-column: span 12 / span 12; }
+}
+
+@media (max-width: 640px) {
+  .meddirector-span-3,
+  .meddirector-span-4,
+  .meddirector-span-6,
+  .meddirector-span-8,
+  .meddirector-span-12 { grid-column: span 12 / span 12; }
+  .meddirector-grid { gap: 12px; }
+}
+

@@ -1,0 +1,309 @@
+:root {
+    --md-sys-green: #1e4620; /* WellMeadows Hospital Brand Green color match */
+    --md-text-dark: #111111;
+    --md-text-muted: #6c757d;
+    --md-border-line: #e2e8f0;
+    
+    /* Pill specific text tokens colors matching image specifications */
+    --pharm-bg: #f3e8ff;  --pharm-txt: #6b21a8;
+    --surg-bg: #e0f2fe;   --surg-txt: #0369a1;
+    --hard-bg: #fef3c7;   --hard-txt: #92400e;
+}
+
+.meddirector-system-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Base Main Canvas Box layout structural card */
+.meddirector-supplier-main-card {
+    background: #ffffff;
+    border: 1px solid var(--md-border-line);
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.01);
+}
+
+.md-supplier-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.md-supplier-title {
+    font-size: 1.55rem;
+    font-weight: 700;
+    color: var(--md-text-dark);
+    margin: 0;
+}
+
+.md-dots-btn {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    color: var(--md-text-muted);
+    cursor: pointer;
+}
+
+/* Structural Controls Toolbar Element Deck Layout */
+.md-supplier-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    gap: 15px;
+}
+
+.md-toolbar-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+}
+
+/* Premium Embedded Search Area Box */
+.md-search-box-wrapper {
+    background-color: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 320px;
+    width: 100%;
+}
+
+.md-search-icon {
+    color: var(--md-text-muted);
+    font-size: 0.95rem;
+}
+
+.md-search-input {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: var(--md-text-dark);
+    font-size: 0.95rem;
+}
+
+.md-btn-filter {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--md-text-dark);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.md-btn-add-primary {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 10px 22px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--md-text-dark);
+    cursor: pointer;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+    transition: background 0.1s ease;
+}
+
+.md-btn-add-primary:hover, .md-btn-filter:hover {
+    background-color: #f8f9fa;
+}
+
+/* Sub-Card Enclosures Matrix Layout Blocks */
+.md-supplier-subcard {
+    border: 1px solid var(--md-border-line);
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.md-subcard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.md-subcard-subtitle {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--md-text-dark);
+    margin: 0;
+}
+
+.md-subcard-meta-location {
+    font-size: 0.9rem;
+    color: var(--md-text-muted);
+    font-weight: 500;
+}
+
+/* Premium Layout Data View Tables Styles */
+.md-table-responsive-container {
+    overflow-x: auto;
+}
+
+.md-supplier-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.md-supplier-table th {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #475569;
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--md-border-line);
+}
+
+.md-supplier-table td {
+    padding: 18px 16px;
+    font-size: 0.95rem;
+    color: #1e293b;
+    border-bottom: 1px solid #f1f5f9;
+    vertical-align: middle;
+}
+
+/* Text Detail Line Spacers formatting */
+.md-sup-name-main { font-weight: 700; color: var(--md-text-dark); margin-bottom: 3px; }
+.md-sup-type-badge { font-size: 0.76rem; font-weight: 600; padding: 2px 10px; border-radius: 6px; display: inline-block; margin-top: 4px; }
+
+.md-sup-type-badge.pharmaceutical { background-color: var(--pharm-bg); color: var(--pharm-txt); }
+.md-sup-type-badge.surgical       { background-color: var(--surg-bg);  color: var(--surg-txt); }
+.md-sup-type-badge.hardware       { background-color: var(--hard-bg);  color: var(--hard-txt); }
+.md-sup-type-badge.medical-hardware { background-color: var(--hard-bg); color: var(--hard-txt); }
+
+.md-txt-addr-sub { font-size: 0.85rem; color: var(--md-text-muted); font-weight: 400; margin-top: 3px; }
+
+/* Custom Action Update Row elements styling */
+.md-btn-action-update {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--md-text-dark);
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.md-btn-action-update:hover {
+    background-color: #f1f5f9;
+    border-color: #94a3b8;
+}
+
+/* Interactive Overlay Pop-ups Structures */
+.md-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.md-hidden {
+    display: none !important;
+}
+
+.md-modal-window {
+    background-color: #ffffff;
+    border-radius: 14px;
+    width: 100%;
+    max-width: 620px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    overflow: hidden;
+    animation: mdModalFadeIn 0.2s ease-out;
+}
+
+@keyframes mdModalFadeIn {
+    from { opacity: 0; transform: translateY(-15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.md-modal-header {
+    background-color: var(--md-sys-green);
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.md-modal-header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+}
+
+.md-modal-header-icon { font-size: 1.15rem; }
+.md-modal-title { font-size: 1.15rem; font-weight: 600; margin: 0; letter-spacing: -0.2px; }
+
+.md-modal-close-x-btn {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    transition: color 0.1s ease;
+}
+.md-modal-close-x-btn:hover { color: #ffffff; }
+
+.md-modal-form-body { padding: 24px; box-sizing: border-box; }
+.md-form-section-subtitle { font-size: 0.95rem; font-weight: 700; color: #1a202c; margin: 0 0 14px 0; border-bottom: 1px solid #edf2f7; padding-bottom: 6px; letter-spacing: -0.1px; }
+.md-form-section-subtitle:not(:first-of-type) { margin-top: 22px; }
+
+.md-form-row { display: flex; gap: 16px; margin-bottom: 16px; }
+.md-form-row.single-column { margin-bottom: 8px; }
+.md-form-field-group { flex: 1; display: flex; flex-direction: column; gap: 6px; }
+.md-form-label { font-size: 0.85rem; font-weight: 600; color: #4a5568; }
+
+.md-form-input, .md-form-select, .md-form-textarea {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 0.95rem;
+    color: #1a202c;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.1s ease;
+}
+.md-form-input::placeholder, .md-form-textarea::placeholder { color: #a0aec0; }
+.md-form-input:focus, .md-form-select:focus, .md-form-textarea:focus { border-color: #4a5568; }
+
+.md-modal-action-row { display: flex; justify-content: flex-end; gap: 12px; margin-top: 26px; border-top: 1px solid #edf2f7; padding-top: 16px; }
+.md-btn-modal-cancel { background-color: #ffffff; border: 1px solid #cbd5e1; border-radius: 8px; padding: 10px 20px; font-size: 0.95rem; font-weight: 600; color: #4a5568; cursor: pointer; }
+.md-btn-modal-submit { background-color: var(--md-sys-green); border: 1px solid transparent; border-radius: 8px; padding: 10px 24px; font-size: 0.95rem; font-weight: 600; color: #ffffff; cursor: pointer; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+
+.md-btn-modal-cancel:hover { background-color: #f7fafc; }
+.md-btn-modal-submit:hover { opacity: 0.95; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .md-supplier-toolbar { flex-direction: column; align-items: stretch; }
+    .md-search-box-wrapper { max-width: 100%; }
+    .md-form-row { flex-direction: column; gap: 12px; }
+    .md-modal-window { width: 92%; margin: 10px; }
+}

@@ -1,0 +1,206 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    overflow:hidden;
+}
+
+/* MAIN SECTION */
+.hero{
+    width:100%;
+    height:100vh;
+
+    background-image:url('/images/background.jpg');
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:clamp(20px, 5vw, 100px);
+
+    gap:40px;
+    flex-wrap: nowrap; /* prevents unwanted pushing */
+    position:relative;
+}
+
+/* DARK OVERLAY */
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.4);
+}
+
+/* KEEP CONTENT ABOVE OVERLAY */
+.login-box,
+.title-box,
+.brand-name{
+    position:relative;
+    z-index:2;
+}
+
+/* LOGIN BOX */
+.login-box{
+    width: clamp(320px, 27vw, 450px);
+    min-height: 550px;
+    padding: clamp(25px, 2vw, 45px);
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 40px;   /* simple and safe spacing */
+}
+
+/* LOGIN TITLE */
+.login-box h2{
+    text-align:center;
+    margin-bottom:5px;
+}
+
+.login-box p{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:15px;
+}
+
+/* INPUTS */
+.login-box input{
+    width:100%;
+
+    padding:20px;
+
+    margin-bottom:18px;
+
+    border:none;
+    border-radius:10px;
+
+    outline:none;
+
+    font-size:15px;
+}
+
+/* BUTTON */
+.buttons button{
+    width:100%;
+    padding:15px;
+    margin-top:25px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+    background:#58936E;
+    transition:0.3s ease;
+}
+
+.buttons button:hover{
+    background:#c1c3c2;
+}
+
+/* ERROR */
+.error{
+    color:#ffb3b3;
+    text-align:center;
+    margin-top:10px;
+    font-size:14px;
+}
+
+/* RIGHT TITLE */
+.title-box{
+    color:white;
+    text-align:right;
+    max-width:900px;
+
+    flex:1;
+    position:relative;
+}
+
+/* TITLE */
+.title-box h1{
+    font-size:clamp(3rem, 6vw, 6rem);
+    line-height:1.0;
+    margin-bottom:10px;
+    font-weight:800;
+}
+
+/* SUBTITLE */
+.title-box p{
+    font-size:clamp(1rem, 1.2vw, 1.4rem);
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+/* TOP BRAND */
+.brand-name{
+    position:absolute;
+    top:20px;
+    right:clamp(20px, 4vw, 80px);
+    color:white;
+    font-size:clamp(2rem, 3vw, 3rem);
+    font-weight:bold;
+}
+
+.brand-name span{
+    color:#58936E;
+}
+
+/* LOGO AREA */
+.logo-wrapper{
+    height:110px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    overflow:hidden;
+
+    margin-bottom:10px;
+}
+
+/* LOGO IMAGE */
+.logos{
+    width:230px;
+    height:auto;
+
+    transform:scale(1.35);
+}
+
+/* LOGIN OPTIONS */
+.login-options{
+    margin-top:12px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+}
+
+.remember-me{
+    font-size:14px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:#fff;
+    white-space:nowrap;
+}
+
+.remember-me input[type="checkbox"]{
+    width:auto;
+    padding:0;
+    margin:0;
+}
+
+.forgot-password{
+    color:#fff;
+    opacity:0.9;
+    font-size:14px;
+    text-decoration:underline;
+}
+

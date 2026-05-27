@@ -1,0 +1,241 @@
+:root {
+    --md-sys-green: #1e4620;
+    --md-text-dark: #111111;
+    --md-text-gray: #718096;
+    --md-border-color: #e2e8f0;
+    
+    /* Cluster specific badge color values maps */
+    --c-seen-bg: #e6fffa;     --c-seen-txt: #14532d;
+    --c-pending-bg: #fffaf0;  --c-pending-txt: #7c2d12;
+    --c-dna-bg: #fff5f5;      --c-dna-txt: #7f1d1d;
+    --c-new-bg: #ebf8ff;      --c-new-txt: #1e3a8a;
+    --c-ref-bg: #f5f3ff;      --c-ref-txt: #5b21b6;
+    --c-flw-bg: #f8fafc;      --c-flw-txt: #334155;
+}
+
+.meddirector-system-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.meddirector-header-card {
+    background: #ffffff;
+    border: 1px solid var(--md-border-color);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.meddirector-header-title { font-size: 1.4rem; font-weight: 700; color: var(--md-sys-green); margin: 0 0 6px 0; }
+.meddirector-header-subtitle { font-size: 0.85rem; color: var(--md-text-gray); margin: 0; }
+
+.md-outpatient-master-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.md-clinic-block-card {
+    background: #ffffff;
+    border: 1px solid var(--md-border-color);
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.01), 0 2px 4px -1px rgba(0,0,0,0.01);
+    overflow: hidden;
+}
+
+/* Metadata Header Card Block */
+.md-clinic-top-section {
+    background-color: #ffffff;
+    padding: 24px;
+    border-bottom: 1px solid var(--md-border-color);
+}
+
+.md-clinic-meta-left {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.md-clinic-icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.md-clinic-icon-box svg { width: 24px; height: 24px; }
+
+/* Category Visual Icon Colors */
+.bg-theme-cardio   { background-color: #e6fffa; color: #0d9488; }
+.bg-theme-neuro    { background-color: #eef2ff; color: #4f46e5; }
+.bg-theme-ortho    { background-color: #fffaf0; color: #ea580c; }
+
+.md-clinic-text-details {
+    flex: 1;
+}
+
+.md-clinic-title-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+}
+
+.md-clinic-name {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--md-text-dark);
+    margin: 0;
+    letter-spacing: -0.3px;
+}
+
+.md-clinic-subline {
+    font-size: 0.9rem;
+    color: var(--md-text-gray);
+    font-weight: 500;
+    margin: 0 0 10px 0;
+}
+
+/* Cluster Badges Framework Layout */
+.md-clinic-badges-cluster {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.md-cluster-badge {
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 6px;
+}
+
+.badge-seen       { background-color: var(--c-seen-bg);     color: var(--c-seen-txt); }
+.badge-pending    { background-color: var(--c-pending-bg);  color: var(--c-pending-txt); }
+.badge-dna        { background-color: var(--c-dna-bg);      color: var(--c-dna-txt); }
+.badge-new        { background-color: var(--c-new-bg);      color: var(--c-new-txt); }
+
+/* Secondary Sub-Badges Row beneath information line */
+.md-clinic-sub-badges-row {
+    display: flex;
+    gap: 8px;
+}
+
+.md-sub-badge {
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 4px 14px;
+    border-radius: 20px;
+}
+.badge-referrals  { background-color: var(--c-ref-bg);      color: var(--c-ref-txt); }
+.badge-followups  { background-color: var(--c-flw-bg);      color: var(--c-flw-txt); border: 1px solid var(--md-border-color); }
+
+/* Parallel Split Workspace Columns Layer */
+.md-clinic-split-workspace {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #ffffff;
+    border-top: 1px solid #f1f5f9;
+}
+
+.md-workspace-column {
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.md-workspace-column:first-child {
+    border-right: 1px solid var(--md-border-color);
+}
+
+.md-column-title-heading {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--md-text-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 16px 0;
+    border-bottom: 1px solid #f8fafc;
+    padding-bottom: 8px;
+}
+
+.md-items-list-deck {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Individual Row Entries layout specifications matching visual design layout shape elements */
+.md-list-item-row {
+    display: flex;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+.md-list-item-row:last-child { border-bottom: none; }
+
+/* Circle Initials Avatars */
+.md-avatar-initials {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.82rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+.md-avatar-initials.bg-theme-cardio { background-color: #eff6ff; color: #1d4ed8; }
+.md-avatar-initials.bg-theme-neuro  { background-color: #faf5ff; color: #6b21a8; }
+.md-avatar-initials.bg-theme-ortho  { background-color: #fff7ed; color: #c2410c; }
+
+.md-item-body-details {
+    flex: 1;
+    padding-left: 14px;
+    min-width: 0;
+}
+
+.md-item-row-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2px;
+}
+
+.md-patient-full-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--md-text-dark);
+}
+
+.md-item-description-text {
+    font-size: 0.88rem;
+    color: var(--md-text-gray);
+    margin: 0;
+}
+
+/* Direct item status modifier pills shapes */
+.md-status-pill {
+    font-size: 0.74rem;
+    font-weight: 600;
+    padding: 2px 10px;
+    border-radius: 6px;
+}
+
+.pill-priority-urgent   { background-color: #fff5f5; color: #9b2c2c; }
+.pill-priority-routine  { background-color: #f0fff4; color: #166534; }
+.pill-priority-soon     { background-color: #fffaf0; color: #9a3412; }
+.pill-schedule-state    { background-color: #eff6ff; color: #1e40af; }
+
+.md-column-empty-fallback { padding: 12px 0; color: var(--md-text-gray); font-size: 0.9rem; font-style: italic; }
+.md-outpatient-empty-canvas { padding: 40px; text-align: center; color: var(--md-text-gray); border: 2px dashed var(--md-border-color); border-radius: 12px; }
+
+@media (max-width: 992px) {
+    .md-clinic-split-workspace { grid-template-columns: 1fr; }
+    .md-workspace-column:first-child { border-right: none; border-bottom: 1px solid var(--md-border-color); }
+    .md-clinic-title-row { flex-direction: column; align-items: flex-start; gap: 8px; }
+}

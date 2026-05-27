@@ -1,0 +1,319 @@
+:root {
+    --md-sys-green: #1e4620;
+    --md-text-dark: #111111;
+    --md-text-muted: #4a5568;
+    --md-text-gray: #718096;
+    --md-border-line: #e2e8f0;
+    
+    /* Out of Stock Alert Colors (Red Theme Accent Tokens) */
+    --alert-red-bg: #fff5f5;
+    --alert-red-txt: #9b2c2c;
+    --alert-red-badge: #feb2b2;
+    
+    /* Low Stock Alert Colors (Yellow/Orange Theme Accent Tokens) */
+    --alert-yellow-bg: #fffaf0;
+    --alert-yellow-txt: #9c4221;
+    --alert-yellow-badge: #fbd38d;
+}
+
+.meddirector-system-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.meddirector-header-card {
+    background: #ffffff;
+    border: 1px solid var(--md-border-line);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.meddirector-header-title { 
+    font-size: 1.4rem; 
+    font-weight: 700; 
+    color: var(--md-sys-green); 
+    margin: 0 0 6px 0; 
+}
+
+.meddirector-header-subtitle { 
+    font-size: 0.85rem; 
+    color: var(--md-text-gray); 
+    margin: 0; 
+}
+
+/* ==========================================================================
+   TOP SECTION: 3-COLUMN MASONRY MATRIX WARD GRIDS 
+   ========================================================================== */
+.md-supply-masonry-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.md-supply-block-card {
+    background: #ffffff;
+    border: 1px solid var(--md-border-line);
+    border-radius: 16px;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.md-supply-card-top {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.md-supply-icon-box {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.md-supply-icon-box svg { width: 18px; height: 18px; }
+
+/* Custom Pastel Background Color Themes matches top sections */
+.bg-theme-general    { background-color: #e6fffa; color: #319795; }
+.bg-theme-icu        { background-color: #fff5f5; color: #e53e3e; }
+.bg-theme-surgical   { background-color: #ebf8ff; color: #3182ce; }
+.bg-theme-pediatrics { background-color: #fffaf0; color: #dd6b20; }
+.bg-theme-neurology  { background-color: #eef2ff; color: #4f46e5; }
+.bg-theme-maternity  { background-color: #fdf2f8; color: #b83280; }
+
+.md-supply-ward-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--md-text-dark);
+    margin: 0;
+    letter-spacing: -0.2px;
+}
+
+.md-supply-metrics-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.md-supply-line-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f8fafc;
+}
+.md-supply-line-item.border-none { border-bottom: none; }
+
+.md-supply-item-label {
+    font-size: 0.95rem;
+    color: var(--md-text-muted);
+    font-weight: 500;
+}
+
+.md-supply-item-value {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--md-text-dark);
+    text-align: right;
+}
+
+/* ==========================================================================
+   BOTTOM SECTION: LOW STOCK & OUT OF STOCK ALERTS CARD PANELS
+   ========================================================================== */
+.md-stock-alerts-card {
+    background: #ffffff;
+    border: 1px solid var(--md-border-line);
+    border-radius: 16px;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.md-stock-card-title-header {
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+}
+
+.md-stock-main-heading {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--md-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+/* Red Notice Ribbon Element Banner */
+.md-stock-notice-banner-row {
+    background-color: var(--alert-red-bg);
+    border: 1px solid #fed7d7;
+    border-radius: 12px;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.md-notice-banner-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.md-notice-banner-exclamation-icon {
+    color: var(--alert-red-txt);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.md-notice-banner-bold-text {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--alert-red-txt);
+}
+
+.md-notice-count-badge {
+    background-color: #feb2b2;
+    color: #742a2a;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.md-stock-items-vertical-list {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Row Lines Distribution Matrix */
+.md-stock-item-row-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+.md-stock-item-row-line:last-child { border-bottom: none; }
+
+.md-stock-item-meta-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex: 2;
+    min-width: 0;
+}
+
+/* Context Round Dot Indicators Markers */
+.md-stock-context-dot {
+    font-size: 2.2rem;
+    line-height: 0;
+    cursor: default;
+}
+.md-stock-context-dot.dot-state-outofstock { color: #e53e3e; }
+.md-stock-context-dot.dot-state-lowstock   { color: #dd6b20; }
+
+.md-stock-text-details-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.md-stock-item-name-main {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--md-text-dark);
+    margin: 0;
+}
+
+.md-stock-item-meta-subline {
+    font-size: 0.88rem;
+    color: var(--md-text-gray);
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Center Column Remaining Stocks Quantifiers Block */
+.md-stock-quantifier-center-block {
+    flex: 1;
+    text-align: right;
+    padding-right: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.md-stock-remaining-qtytext {
+    font-size: 1rem;
+    font-weight: 700;
+}
+.md-stock-remaining-qtytext.text-state-outofstock { color: #c53030; }
+.md-stock-remaining-qtytext.text-state-lowstock   { color: #9c4221; }
+
+.md-stock-allocated-wards-text {
+    font-size: 0.88rem;
+    color: var(--md-text-gray);
+    font-weight: 500;
+}
+
+/* Right Column Badges Pill Flag Block elements */
+.md-stock-pill-right-block {
+    min-width: 115px;
+    text-align: right;
+}
+
+.md-stock-status-pill {
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 8px;
+    display: inline-block;
+    text-align: center;
+    width: 90px;
+}
+
+.md-stock-status-pill.badge-state-outofstock {
+    background-color: #fff5f5;
+    color: #9b2c2c;
+    border: 1px solid #feb2b2;
+}
+
+.md-stock-status-pill.badge-state-lowstock {
+    background-color: #fffaf0;
+    color: #9c4221;
+    border: 1px solid #fbd38d;
+}
+
+/* Fallback Configuration elements layouts */
+.md-stock-empty-fallback-state {
+    padding: 44px;
+    text-align: center;
+    color: var(--md-text-gray);
+    border: 2px dashed var(--md-border-line);
+    border-radius: 14px;
+    font-style: italic;
+    background-color: #fafafa;
+}
+.md-empty-state-message { margin: 0; font-size: 0.95rem; }
+.md-supply-empty-fallback-box { grid-column: span 3; padding: 40px; text-align: center; color: var(--md-text-gray); }
+
+/* Responsive Grid Adjustments */
+@media (max-width: 1024px) {
+    .md-supply-masonry-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .md-supply-masonry-grid { grid-template-columns: 1fr; }
+    .md-stock-item-row-line { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .md-stock-quantifier-center-block { text-align: left; padding-right: 0; }
+    .md-stock-pill-right-block { text-align: left; }
+    .md-stock-notice-banner-row { flex-direction: column; align-items: flex-start; gap: 10px; }
+}

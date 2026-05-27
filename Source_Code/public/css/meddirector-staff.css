@@ -1,0 +1,155 @@
+:root {
+    --md-system-green: #1e4620;
+    --md-text-dark: #2d3748;
+    --md-text-gray: #718096;
+    --md-border-color: #e2e8f0;
+}
+
+.meddirector-system-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.meddirector-header-card {
+    background: #ffffff;
+    border: 1px solid var(--md-border-color);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.meddirector-header-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--md-system-green);
+    margin: 0 0 6px 0;
+}
+
+.meddirector-header-subtitle {
+    font-size: 0.85rem;
+    color: var(--md-text-gray);
+    margin: 0;
+}
+
+.meddirector-staff-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.meddirector-staff-card {
+    background: #ffffff;
+    border: 1px solid var(--md-border-color);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.01);
+    display: flex;
+    flex-direction: column;
+    min-height: 145px;
+    box-sizing: border-box;
+}
+
+.md-staff-card-header { display: flex; align-items: center; gap: 10px; }
+.md-staff-svg-icon { width: 18px; height: 18px; color: var(--md-text-gray); }
+.md-staff-label { font-size: 0.9rem; font-weight: 500; color: var(--md-text-gray); }
+.md-staff-number { font-size: 2.8rem; font-weight: 700; color: var(--md-system-green); margin: 10px 0 4px 0; line-height: 1.1; }
+.md-staff-subtext { font-size: 0.85rem; color: var(--md-text-gray); }
+
+/* Stretches container perfectly across dashboard canvas boundaries */
+.meddirector-roster-workspace-full {
+    width: 100%;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+.meddirector-panel-card {
+    background: #ffffff;
+    border: 1px solid var(--md-border-color);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.md-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 14px;
+    margin-bottom: 6px;
+}
+
+.md-panel-header-left { display: flex; align-items: center; gap: 8px; }
+.md-panel-title-icon { width: 18px; height: 18px; color: #4a5568; }
+.md-panel-title { font-size: 1.05rem; font-weight: 700; color: #1a202c; margin: 0; }
+
+/* Custom Scroll View Window */
+.md-panel-list-scrollable {
+    max-height: 480px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+.md-panel-list-scrollable::-webkit-scrollbar { width: 5px; }
+.md-panel-list-scrollable::-webkit-scrollbar-track { background: transparent; }
+.md-panel-list-scrollable::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 99px; }
+
+/* Inside Row Formatting Structure */
+.md-panel-row-item {
+    display: flex;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid #f8fafc;
+}
+.md-panel-row-item:last-child { border-bottom: none; }
+
+.md-panel-icon-box {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.md-panel-icon-box svg { width: 18px; height: 18px; }
+
+.color-theme-general    { background-color: #e6fffa; color: #319795; }
+.color-theme-icu        { background-color: #fff5f5; color: #e53e3e; }
+.color-theme-pediatrics { background-color: #fffaf0; color: #dd6b20; }
+.color-theme-surgical   { background-color: #ebf8ff; color: #3182ce; }
+.color-theme-neurology  { background-color: #eef2ff; color: #4f46e5; }
+
+.md-panel-details {
+    flex: 1;
+    padding-left: 14px;
+    min-width: 0;
+}
+
+.md-ward-row-title { font-size: 0.95rem; font-weight: 700; color: #1a202c; margin: 0 0 4px 0; }
+.md-badge-row { display: flex; flex-wrap: wrap; gap: 4px; }
+
+/* Dynamic Pill Tags */
+.md-roster-pill { font-size: 0.72rem; font-weight: 600; padding: 1px 8px; border-radius: 9999px; display: inline-block; }
+.pill-total    { background-color: #f8fafc; color: #334155; }
+.pill-nurses   { background-color: #e6fffa; color: #234e52; }
+.pill-doctors  { background-color: #ebf8ff; color: #2b6cb0; }
+.pill-support  { background-color: #f5f3ff; color: #5b21b6; }
+
+/* Metric Data Alignments */
+.md-roster-side-metrics { text-align: right; min-width: 70px; }
+.md-metric-patients { font-size: 1.05rem; font-weight: 700; color: #1a202c; display: flex; align-items: center; justify-content: flex-end; gap: 4px; }
+.md-metric-patients.text-alert { color: #e53e3e; }
+.md-alert-triangle { font-size: 0.9rem; color: #dd6b20; }
+.md-metric-beds { font-size: 0.8rem; color: #718096; margin-top: 1px; }
+.md-panel-empty { padding: 20px 0; color: #718096; text-align: center; }
+
+@media (max-width: 768px) {
+    .meddirector-staff-metrics-grid { grid-template-columns: 1fr; gap: 15px; }
+}

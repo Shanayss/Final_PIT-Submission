@@ -1,0 +1,48 @@
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:white;
+    font-family:'Inter', sans-serif;
+}
+
+.container{
+    text-align:center;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo{
+    width:45px;
+    height:45px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.name{
+    font-size:34px;
+    font-weight:700;
+}
+
+.well{ color:#111; }
+.meadows{ color:#00a86b; }
+
+.hospital{
+    font-size:18px;
+    font-weight:500;
+    color:#777;
+    margin-left:6px;
+}

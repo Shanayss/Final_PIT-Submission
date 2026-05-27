@@ -1,0 +1,183 @@
+:root {
+    --md-sys-green: #1e4620;
+    --md-text-main: #1a202c;
+    --md-text-sub: #718096;
+    --md-border-line: #e2e8f0;
+    
+    /* Layout background color tokens matching image design parameters */
+    --theme-general-bg: #e6fffa;    --theme-general-txt: #234e52;
+    --theme-icu-bg: #fff5f5;        --theme-icu-txt: #9b2c2c;
+    --theme-pediatrics-bg: #fffaf0; --theme-pediatrics-txt: #dd6b20;
+    --theme-surgical-bg: #fff5f5;   --theme-surgical-txt: #dd6b20;
+    --theme-neurology-bg: #eef2ff;  --theme-neurology-txt: #3730a3;
+    --theme-maternity-bg: #fdf2f8;  --theme-maternity-txt: #9d174d;
+}
+
+.meddirector-system-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.meddirector-header-card {
+    background: #ffffff;
+    border: 1px solid var(--md-border-line);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.meddirector-header-title { font-size: 1.4rem; font-weight: 700; color: var(--md-sys-green); margin: 0 0 6px 0; }
+.meddirector-header-subtitle { font-size: 0.85rem; color: var(--md-text-sub); margin: 0; }
+
+.meddirector-report-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.md-report-summary-card {
+    background: #ffffff;
+    border: 1px solid var(--md-border-line);
+    border-radius: 12px;
+    padding: 18px 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.01);
+}
+
+.md-summary-label {
+    color: var(--md-text-sub);
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.md-summary-value {
+    color: var(--md-sys-green);
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.meddirector-report-masonry-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.meddirector-report-card {
+    background: #ffffff;
+    border: 1px solid var(--md-border-line);
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.01);
+    box-sizing: border-box;
+}
+
+.md-report-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f8fafc;
+    padding-bottom: 14px;
+}
+
+.md-report-title-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.md-report-icon-box svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.md-ward-display-name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--md-text-main);
+    margin: 0;
+    letter-spacing: -0.2px;
+}
+
+.md-capacity-badge {
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: 8px;
+    display: inline-block;
+    text-align: center;
+}
+
+.badge-theme-general    { background-color: var(--theme-general-bg);    color: var(--theme-general-txt); }
+.badge-theme-icu        { background-color: var(--theme-icu-bg);        color: var(--theme-icu-txt); }
+.badge-theme-pediatrics { background-color: var(--theme-pediatrics-bg); color: var(--theme-pediatrics-txt); }
+.badge-theme-surgical   { background-color: var(--theme-surgical-bg);   color: var(--theme-surgical-txt); }
+.badge-theme-neurology  { background-color: var(--theme-neurology-bg);  color: var(--theme-neurology-txt); }
+.badge-theme-maternity  { background-color: var(--theme-maternity-bg);  color: var(--theme-maternity-txt); }
+
+.color-theme-general    { color: #319795; }
+.color-theme-icu        { color: #e53e3e; }
+.color-theme-pediatrics { color: #dd6b20; }
+.color-theme-surgical   { color: #dd6b20; }
+.color-theme-neurology  { color: #4f46e5; }
+.color-theme-maternity  { color: #b83280; }
+
+.md-report-metrics-splitter-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 14px;
+}
+
+.md-metric-column-node {
+    text-align: center;
+    padding: 4px 0;
+    border-right: 1px solid #edf2f7;
+}
+
+.md-metric-column-node:last-child {
+    border-right: none; 
+}
+
+.md-metric-quantifier-number {
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: #2d3748;
+    line-height: 1.2;
+    margin-bottom: 2px;
+}
+
+.md-metric-label-text {
+    font-size: 0.8rem;
+    color: var(--md-text-sub);
+    font-weight: 500;
+}
+
+.meddirector-report-empty-state-box {
+    grid-column: span 2;
+    padding: 50px;
+    text-align: center;
+    color: var(--md-text-sub);
+    border: 2px dashed var(--md-border-line);
+    border-radius: 12px;
+}
+
+@media (max-width: 900px) {
+    .meddirector-report-summary-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .meddirector-report-masonry-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 560px) {
+    .meddirector-report-summary-grid { grid-template-columns: 1fr; }
+    .md-report-metrics-splitter-row { grid-template-columns: repeat(2, 1fr); row-gap: 12px; }
+    .md-metric-column-node:nth-child(2n) { border-right: none; }
+}
